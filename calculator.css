@@ -1,0 +1,115 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #141414;
+    color: #E5E5E5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: #333;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    animation: fadeIn 2s ease forwards 2s;
+}
+
+h1 {
+    text-align: center;
+    color: #E50914;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input {
+    width: 80%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    width: 80%;
+    padding: 10px;
+    background-color: #E50914;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #B81D24;
+}
+
+#result {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1.2em;
+    color: #E5E5E5;
+}
+
+/* Enhanced Welcome Message Animation */
+.welcome-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4em;
+    color: rgb(255, 11, 11);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    animation: netflixIntro 2s ease forwards;
+}
+
+@keyframes netflixIntro {
+    0% { 
+        transform: translate(-50%, -50%) scale(0.5); 
+        opacity: 0; 
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    25% { 
+        transform: translate(-50%, -50%) scale(1.2); 
+        opacity: 1; 
+        text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+    }
+    50% { 
+        transform: translate(-50%, -50%) scale(1); 
+        opacity: 1; 
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+    }
+    75% { 
+        transform: translate(-50%, -50%) scale(0.9); 
+        opacity: 1; 
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+    }
+    100% { 
+        transform: translate(-50%, -50%) scale(1); 
+        opacity: 0; 
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+    }
+}
+
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
